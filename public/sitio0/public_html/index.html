@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="images/unic-spa.ico" type="image/x-icon">
+    <title>UNIC Spa</title>
+    
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css.map">
+    <link rel="stylesheet" href="./css/aos.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/ionicon.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+
+</head>
+<body>
+    <header class="header">
+        <div class="container d-flex justify-content-center align-items-center">
+            <div class="wrapper">
+                <div class="header-item-left">
+                    <a href="/index.html">
+                        <img class="logo-img" src="images/logo-unic.png" alt="Fundacion Sobrevivientes">
+                    </a>
+                </div>
+
+                <div class="header-item-right">
+                    <nav class="menu">
+                        <div class="menu-mobile-header">
+                            <button type="button" class="menu-mobile-arrow"><i class="ion ion-ios-arrow-back"></i></button>
+                            <div class="menu-mobile-title"></div>
+                            <button type="button" class="menu-mobile-close"><i class="ion ion-ios-close"></i></button>
+                        </div>
+                        <ul class="menu-section">
+                            <li><a href="#">SERVICIOS</a></li>
+                            <li><a href="../tratamientos/index.html">TRATAMIENTOS</a></li>
+                            <li><a href="#">NOSOTROS</a></li>
+                            <li><a href="#">Contactos</a></li>
+                        </ul>
+                    </nav>
+                    <button type="button" class="menu-mobile-trigger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <!-- ==============  -->
+    <main class="main-section">
+        <h1 class="main-title">centro_estético</h1>
+        
+        <div class="chicaswrap">
+            <img class="chica chica-1 active" src="./images/chica-1.png" alt="chica 1">
+            <img class="chica chica-2" src="./images/2chica-1.png" alt="chica 2">
+        </div>
+        
+        <div class="circulo">
+            <div class="circulito circle-1">
+                <img src="./images/circulito.jpg" alt="spa">
+            </div>
+            <div class="circulito circle-2">
+                <img src="./images/circulito2.jpg" alt="spa">
+            </div>
+            <div class="circulito circle-3">
+                <img src="./images/circulito3.jpg" alt="spa">
+            </div>
+            <div class="circulito circle-4">
+                <img src="./images/circulito3.jpg" alt="spa">
+            </div>
+        </div>
+        <img onclick="prevSlide();"class="arrow arrow-left" src="./images/arrow-left.png" alt="arrow left">
+        <img onclick="nextSlide();" class="arrow arrow-right" src="./images/arrow-right.png" alt="arrow right">
+    </main>
+    <!-- ==============  -->
+    <section class="franja">
+        <div class="container">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-12 col-md-8">
+                    <div class="franja-text">
+                        <p>
+                            En Unic Spa, queremos todo lo mejor para ti.
+                            ¡Nuestros servicios te ayudarán día a día hasta
+                            conseguir tu mejor versión!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==============  -->
+    <section class="thumbs-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="thumb">
+                    <div class="thumb-wrap-img">
+                        <img src="./images/masajes.png" alt="masajes relajantes">
+                    </div>
+                    <h5>Masajes Relajantes</h5>
+                    <small>
+                        Una amplia gama de masajes 
+                        sensitivos, relajantes 
+                        y terapéuticos.
+                    </small>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumb">
+                    <div class="thumb-wrap-img">
+                        <img src="./images/tratamientos.png" alt="tratamientos Corporales">
+                    </div>
+                    <h5>Masajes Relajantes</h5>
+                    <small>
+                        Tratamientos quemadores de grasa,
+                        especial, y a la vez relajante.
+                    </small>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumb">
+                    <div class="thumb-wrap-img">
+                        <img src="./images/facial.png" alt="tratamientos faciales">
+                    </div>
+                    <h5>Masajes Relajantes</h5>
+                    <small>
+                        Una amplia gama de masajes
+                        sensitivos, relajantes
+                        y terapéuticos.
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- ==============  -->
+    <section class="nosotros">
+        <img class="puntos1" src="./images/puntos.png" alt="puntos 1">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                    <div class="nosotros-wrap-img">
+                        <div class="nosotros-img-top">
+                            <img class="img-fluid nosotros-decor-top" src="./images/piedra-jazmin.png" alt="piedra jazmin">
+                        </div>
+                        <div class="nosotros-img-main">
+                            <img class="img-fluid nosotros-chica-main" src="./images/chica-masaje.jpg" alt="masajes">
+                        </div>
+                        <div class="nosotros-img-down">
+                            <img class="img-fluid nosotros-decor-down" src="./images/piedra-flor.png" alt="piedra flor">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="nosotros-text">
+                        <h3 class="nosotros-h3">UNIC SPA</h3>
+                        <p class="nosotros-p">
+                            En UNIC SPA encontrarás un verdadero refugio de relajación, bienestar, salud y 
+                            belleza a través de una cuidadosa selección de tratamientos corporales y faciales
+                            atendidas por nuestras profesionales altamente capacitadas. <br><br>
+
+                            Nuestras instalaciones están adaptadas para que nuestras pacientes tengan una 
+                            experiencia única, que puedan abstraerse del mundo exterior y lograr un momento
+                            de estado de calma y tranquilidad en un ambiente cómodo, higiénico y seguro. <br><br>
+
+                            En nuestro spa vemos a los masajes como una terapia curativa que permite que las 
+                            personas entren en un estado de relajación y sanación, gracias a la energía que 
+                            transmitimos a través de los diferentes movimientos y presiones que hacemos en el cuerpo. <br>
+
+                        </p>
+                        <button class="nosotros-btn"> <img src="./images/whatsapp.png" alt="whatsapp"> Consultas/Reservas</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="puntos2" src="./images/puntos.png" alt="puntos 2">
+    </section>
+    <!-- ==============  -->
+    
+    <section class="info-section">
+        <img class="planta" src="./images/planta.png" alt="planta">
+        <img class="pantufla" src="./images/pantuflas.png" alt="pantufla">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h2 class="text-center info-titulo">Mas Informaciones </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="info-cuadro">
+                    <h4>Dirección</h4>
+                    <p>
+                        Kurupayty 7000 Ciudad del Este <br>
+                        Paraguay
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info-cuadro">
+                    <h4>Horarios</h4>
+                    <p>
+                        Lunes a Viernes: 09:00 a 20:00 Hs. <br>
+                        Sábados de 9:00 a 19:00 Hs.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info-cuadro">
+                    <h4>Turnos</h4>
+                    <p>
+                        <img src="./images/whatsapp-rosa.png" alt="whatsapp"> 0985 63 99 99
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+        <img class="peine" src="./images/peine.png" alt="peine">
+    </section>
+    
+    <!-- ==============  -->
+    <!-- <section class="vive">
+      <img data-value="20" class="object heartcito heart-1" src="./images/heartcitos.png" alt="" srcset="">
+      <img data-value="6" class="object heartcito heart-2" src="./images/heartcitos.png" alt="" srcset="">
+      <img data-value="5" class="object personajes" src="./images/personajes.png" alt="" srcset="">
+      <img data-value="8" class="object heartcito heart-3" src="./images/heartcitos.png" alt="" srcset="">
+      <img data-value="-5" class="object heartcito heart-4" src="./images/heartcitos.png" alt="" srcset="">
+    </section> -->
+    <!-- ==============  -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="footer-desc">
+                        <img src="./images/logo-unic.png" alt="logo unic">
+                        <p>
+                            En Unic Spa, queremos todo lo mejor para ti.
+                            ¡Nuestros servicios te ayudarán día a día hasta
+                            conseguir tu mejor versión!
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 footer-flex">
+                    <div class="footer-col">
+                        <h4>Dirección</h4>
+                        <p>
+                            Calle Pampliega - Shopping Mirage - 
+                            Centro - CDE
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 footer-flex">
+                    <div class="footer-col">
+                        <h4>Contactos</h4>
+                        <p>
+                            <img src="./images/whatsapp.png" alt="whatsapp"> 0985 63 99 99
+                        </p>
+                        <p>
+                            <img src="./images/email.png" alt="email"> atencion@unicspa.com
+                        </p>
+                    </p>
+                    </div>
+                </div>
+                <div class="col-md-3 footer-flex">
+                    <div class="footer-col">
+                        <h4>Síguenos</h4>
+                        <p>
+                            <img src="./images/facebook.png" alt="whatsapp"> Facebook
+                        </p>
+                        <p>
+                            <img src="./images/instagram.png" alt="email"> Instagram
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy">
+            <p>
+                Powered By <a href="https://goonmkt.com"> <span style="font-weight: bold; color: #E30014;">G</span><span style="font-weight: bold; color: #ffc107;">o</span><span style="font-weight: bold; color: #5594C9;">o</span><span style="font-weight: bold; color: #529053;">n</span> </a> | UNIC SPA© 2021
+            </p>
+        </div>
+    </footer>
+    <!-- ==============  -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/aos.js"></script>
+    <script src="js/parallaxvlm.js"></script>
+    <script src="js/menu-scroll.js"></script>
+    <script>
+        var imgBx = document.querySelector('.chicaswrap');
+        var slides = imgBx.getElementsByTagName('img');
+        var i = 0;
+        
+        function nextSlide(){
+            slides[i].classList.remove('active');
+            i = (i + 1) % slides.length;
+            slides[i].classList.add('active');
+        }
+        
+        function prevSlide(){
+            slides[i].classList.remove('active');
+            i = (i - 1 + slides.length) % slides.length;
+            slides[i].classList.add('active');
+        }
+        
+      AOS.init();
+    </script>
+
+</body>
+</html>

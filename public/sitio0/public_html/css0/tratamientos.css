@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    color: #808080;
+}
+
+:root{
+  --main-color: #FFB9AD;
+  --secondary-color:#E5B6B0;
+  --rojito:#D85858;
+  --fondo: #FFF6F5;
+  --gris: #808080;
+  --verde: #3FAE59;
+}
+
+::selection {
+    color: var(--fondo);
+    background: var(--main-color);
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+   }
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(13deg, #d4d4d4 14%,#e6e6e6 64%);
+    border-radius: 9px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(13deg, var(--main-color) 14%,var(--secondary-color) 64%);
+}
+::-webkit-scrollbar-track{
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: inset 7px 10px 12px var(--fondo);
+}
+
+/*=====================
+||    Tratamientos   ||
+=====================*/
+.tratamiento-section{
+  width: 100%;
+  height: 100vh;
+  margin-top: 8vh;
+  padding: 4rem 0rem;
+  background-color: var(--fondo);
+}
+.tratamiento-thumb{
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 35px var(--main-color);
+    margin: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tratamiento-thumb h2{
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--rojito);
+}
+
+.tratamiento-title{
+    color: var(--rojito);
+    font-weight: bold;
+    font-size: 3em;
+}
+
+/* ::::::> Responsive <:::::: */
+
+@media only screen and (max-width: 768px) {
+    .tratamiento-section{
+        height: auto;
+      }
+}

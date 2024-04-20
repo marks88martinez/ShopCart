@@ -1,0 +1,31 @@
+footer{
+    width: 100%;
+    height: auto;
+    background-color: var(--color-primario);
+    padding: 35px 0px 15px 0px;
+}
+footer h6{
+  color: var(--color-secundario);
+}
+footer ul li{
+  list-style: none;
+  margin: 5px 0px;
+}
+footer ul li a{
+  color: #fff;
+}
+footer ul li a:hover {
+  text-decoration: none;
+  color: var(--color-secundario);
+}
+footer ul li a i {
+  color:var(--color-secundario);
+}
+footer p{
+  text-align: center;
+  font-weight: 500;
+  color: var(--gris-claro);
+}
+footer p span{
+  color: var(--color-secundario);
+}

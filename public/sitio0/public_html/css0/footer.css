@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+:root{
+  --main-color: #FFB9AD;
+  --secondary-color:#E5B6B0;
+  --rojito:#D85858;
+  --fondo: #FFF6F5;
+  --gris: #808080;
+  --verde: #3FAE59;
+}
+.footer-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer{
+  width: 100%;
+  height: auto;
+  background-color: #E5B6B0;
+  padding: 3rem 0rem 0rem 0rem;
+}
+
+.footer-desc img{
+  filter: brightness(100);
+  width: 180px;
+  margin-bottom: 25px;
+}
+.footer-col h4, .footer-col p, .footer-desc p{
+  text-align: left;
+}
+
+.footer-col h4{
+  color: var(--rojito);
+  font-weight: 900;
+}
+
+.footer-col p{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.footer-col img{
+  width: 18px;
+  margin-right: 7px;
+  filter: brightness(200);
+}
+
+.copy{
+  width: 100%;
+  height: 40px;
+  background-color: #DE9C93;
+  padding: 15px 0px;
+}
+.copy p{
+  font-size: 13px;
+}
+
+footer p{
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  font-weight: 600;
+  color: #FFF;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~+
+|       Responsive        |
++~~~~~~~~~~~~~~~~~~~~~~~ */
+@media only screen and (max-width: 414px) {
+  .footer-flex{
+    justify-content: flex-start;
+    border-bottom: 1px solid var(--main-color);
+    padding: 15px 15px;
+  }
+}
