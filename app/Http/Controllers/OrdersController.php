@@ -14,9 +14,21 @@ class OrdersController extends Controller
     public function index(Request $request)
     {
         $search =  $request->input('search');
+      
 
             if ( $request->search) {
-        
+                $orders = Order::whereHas('user', function ($query) use ($search) {
+                    $query->where('name', 'like', '%' . $search . '%')
+                          ->orWhere('email', 'like', '%' . $search . '%');
+                })
+                // ->whereHas('orderProducts', function ($query) use ($search) {
+                //     $query->where('product_name', 'like', '%' . $search . '%');
+                // })
+            
+                ->orderBy('id', 'desc')
+                ->paginate(10);
+
+               
                 // $order = Order::where('name','like','%'.$search.'%')->orderBy('id','desc')->paginate(20);
             }else{
                 // $categorias = Categoria::whereNull('categorias_id')->get();

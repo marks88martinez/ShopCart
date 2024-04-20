@@ -9,6 +9,8 @@ use App\Http\Controllers\SubcategoriasController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\OrdersController;
 use App\Http\Controllers\Sitio\HomeController;
+use App\Http\Controllers\EmpresaController;
+
 
 use App\Http\Controllers\CartController;
 
@@ -85,6 +87,8 @@ Route::group(['middleware' => ['auth', 'tipoUser:admin'], 'prefix' => 'admin', '
     Route::post('producto/imageEliminar/{id}', [ProductoController::class, 'imageEliminar'])->name('producto.imageEliminar');
     Route::post('producto/imagenTable/{id}', [ProductoController::class, 'imagenTable'])->name('producto.imagenTable');
     Route::patch('/order/update/{id}', [OrdersController::class, 'updateStatus'])->name('order.updateStatus');
+    Route::resource('empresas', EmpresaController::class);
+
 });
 
 Route::post('/client/users', [HomeController::class, 'storeClientUser'])->name('client.users');

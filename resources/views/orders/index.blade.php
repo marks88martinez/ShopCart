@@ -31,8 +31,8 @@
               <h3 class="card-title"> orders </h3>
 
               <div class="card-tools">
-                <form action="/admin/productos" method="GET">
-                  <div class="input-group input-group-sm" style="width: 150px;">
+                <form action="/admin/orders" method="GET">
+                  <div class="input-group input-group-sm" style="width: 250px;">
                   <input type="text" name="search" class="form-control float-right" placeholder="Search">
 
                   <div class="input-group-append">
