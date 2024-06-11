@@ -11,6 +11,7 @@
                  @foreach ($categorias as $categoria)
                  <li class="sidebar__menu-collapse-list">
                     <div class="accordion">
+               
                         @if ($categoria->children->isNotEmpty())   
                             <a href="{{ url('products/'.$categoria->id) }}"  class="accordion__title" data-toggle="collapse" data-target="#{{$categoria->name}}">
                         @else
@@ -26,8 +27,8 @@
                         <div id="{{$categoria->name}}" class="collapse">
                             <ul class="accordion__category-list">
                                 @foreach ($categoria->children as $children)
-                                
-                                <li><a href="{{ url('products/'.$categoria->id) }}" >{{$children->name}}</a></li>
+                          
+                                <li>  <a href="{{ url('products/'.$children->id) }}" >{{$children->name}}</a></li>
                                 @endforeach
                                 
                             </ul>
