@@ -9,7 +9,8 @@
 
                 <div class="form-group">
                   <label for="exampleInputEmail1">Description</label>
-                  <textarea class="ckeditor form-control" name="description">{{ $producto->description }}</textarea>
+                  {{-- <textarea class="ckeditor form-control" name="description">{{ $producto->description }}</textarea> --}}
+                  <textarea id="editor" class="ckeditor form-control" cols="80" rows="20" name="description">{{ $producto->description }}</textarea>
 
                   {{--  <textarea name="description"  class="form-control"  id="" cols="10" rows="4">{{ $producto->description }}</textarea>  --}}
                 </div>
@@ -198,7 +199,9 @@
                 <div class="form-group">
                   <label for="exampleInputEmail1">Description</label>
                   {{--  <textarea name="description"  class="form-control" id="" cols="10" rows="4"></textarea>  --}}
-                  <textarea class="ckeditor form-control" name="description"></textarea>
+                  <textarea id="editor" class="ckeditor form-control" cols="80" rows="20" name="description"></textarea>
+
+                 
                 </div>
 
 

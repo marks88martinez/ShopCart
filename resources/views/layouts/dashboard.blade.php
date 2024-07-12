@@ -158,6 +158,16 @@ h1 {
         color: #fff;
     }
   </style>
+
+<style>
+  .ck-content{
+    height: 214px;
+  }
+  #editor {
+      width: 100%;
+      height: 400px; /* Ajusta la altura según lo necesario */
+  }
+</style>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed" s>
 <div class="wrapper">
@@ -262,11 +272,28 @@ h1 {
 
 <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
 
-<script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+
+{{-- <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script> --}}
+<script src="https://cdn.ckeditor.com/ckeditor5/12.0.0/classic/ckeditor.js"></script>
+
+
+
 <script type="text/javascript">
     $(document).ready(function () {
-        $('.ckeditor').ckeditor();
+        // $('.ckeditor').ckeditor();
+
+        ClassicEditor
+      .create( document.querySelector( '#editor' ) )
+      .catch( error => {
+          console.error( error );
+      } );
+
     });
+
+   
+</script>
+<script>
+ 
 </script>
 
 
