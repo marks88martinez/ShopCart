@@ -173,7 +173,10 @@
                                                                             </div>
                                                                             <div class="col-12 col-sm-6">
                                                                                 <div class="product__price">
-                                                                                    <span class="product__price-reg">${{ $segundo_producto['precio'] }}</span>
+                                                                                    @if ( $tercer_producto['precio'] != 0)
+                                            
+                                                                                        <span class="product__price-reg">${{ $segundo_producto['precio'] }}</span>
+                                                                                    @endif
                                                                                 </div>
                                                                                 <a href="{{ route('product.detail', ['id' => $segundo_producto['slug']]) }}" class="product__link product__link--underline product__link--weight-light text-overflow-ellipsis m-t-15">
                                                                                     {{ $segundo_producto['name'] }}
