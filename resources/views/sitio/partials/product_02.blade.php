@@ -103,7 +103,10 @@
                                                                         @if(isset($primer_producto['producto_imagenes'][0]))
                                                                             <div class="product__price">
                                                                                 <!-- <span class="product__price-del">$35.90</span> -->
-                                                                                <span class="product__price-reg">$ {{ $primer_producto['precio'] }}</span>
+                                                                                @if ($primer_producto['precio'] != 0)
+                                       
+                                                                                  <span class="product__price-reg">$ {{ $primer_producto['precio'] }}</span>
+                                                                                @endif
                                                                             </div>
                                                                             <a href="{{ route('product.detail', ['id' => $primer_producto['slug']]) }}" class="product__link product__link--underline product__link--weight-light m-t-15">
                                                                                 {{ $primer_producto['name'] }}
@@ -230,7 +233,9 @@
                                                                             <div class="col-12 col-sm-6">
                                                                                 <div class="product__price">
                                                                                     {{-- <span class="product__price-del">$9.00</span> --}}
+                                                                                    @if ( $tercer_producto['precio'] != 0)
                                                                                     <span class="product__price-reg">${{ $tercer_producto['precio'] }}</span>
+                                                                                    @endif
                                                                                 </div>
                                                                                 <a href="{{ route('product.detail', ['id' => $tercer_producto['slug']]) }}" class="product__link product__link--underline product__link--weight-light text-overflow-ellipsis m-t-15">
                                                                                     {{ $tercer_producto['name'] }}
