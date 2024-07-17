@@ -214,7 +214,7 @@ class HomeController extends Controller
        
     
         // Obtener los productos paginados
-        $products = $productsQuery->paginate(16);
+        $products = $productsQuery->paginate(15);
         $productsCount = $productsQuery->count();
         // Conservar el término de búsqueda y la categoría en los enlaces de paginación
         $products->appends(['query' => $query]);
@@ -250,7 +250,7 @@ class HomeController extends Controller
         }
     
         // Obtener los productos paginados
-        $products = $productsQuery->paginate(16);
+        $products = $productsQuery->paginate(15);
         $productsCount = $productsQuery->count();
         // Conservar el término de búsqueda y la categoría en los enlaces de paginación
         $products->appends(['categoria_id' => $categoriaId]);
