@@ -101,7 +101,7 @@
                                                                     </div>
                                                                     <div class="col-md-6">
                                                                         @if(isset($primer_producto['producto_imagenes'][0]))
-e">
+                                                                            <div class="product__price">
                                                                                 <!-- <span class="product__price-del">$35.90</span> -->
                                                                                 @if ($primer_producto['precio'] != 0)
                                        
@@ -173,19 +173,11 @@ e">
                                                                             </div>
                                                                             <div class="col-12 col-sm-6">
                                                                                 <div class="product__price">
-                                                                                    @if(isset($tercer_producto) && isset($tercer_producto['precio']) && $tercer_producto['precio'] != 0)
-                                                                                        @if(isset($segundo_producto) && isset($segundo_producto['precio']))
-                                                                                            <span class="product__price-reg">${{ $segundo_producto['precio'] }}</span>
-                                                                                        @else
-                                                                                            <!-- Manejo del caso donde $segundo_producto o su índice 'precio' no está definido -->
-                                                                                            <span class="product__price-reg">Precio no disponible</span>
-                                                                                        @endif
-                                                                                    @else
-                                                                                        <!-- Manejo del caso donde $tercer_producto no tiene un precio válido -->
-                                                                                        <span class="product__price-reg">Precio no disponible</span>
+                                                                                    @if ( isset($tercer_producto['precio']))
+                                            
+                                                                                        <span class="product__price-reg">${{ $segundo_producto['precio'] }}</span>
                                                                                     @endif
                                                                                 </div>
-                                                                                
                                                                                 <a href="{{ route('product.detail', ['id' => $segundo_producto['slug']]) }}" class="product__link product__link--underline product__link--weight-light text-overflow-ellipsis m-t-15">
                                                                                     {{ $segundo_producto['name'] }}
                                                                                 </a>
@@ -244,13 +236,10 @@ e">
                                                                             <div class="col-12 col-sm-6">
                                                                                 <div class="product__price">
                                                                                     {{-- <span class="product__price-del">$9.00</span> --}}
-                                                                                    @if(isset($tercer_producto) && isset($tercer_producto['precio']) && $tercer_producto['precio'] != 0)
-                                                                                        <span class="product__price-reg">${{ $tercer_producto['precio'] }}</span>
-                                                                                    @else
-                                                                                        <span class="product__price-reg">Precio no disponible</span>
+                                                                                    @if (isset( $tercer_producto['precio']))
+                                                                                    <span class="product__price-reg">${{ $tercer_producto['precio'] }}</span>
                                                                                     @endif
                                                                                 </div>
-                                                                                
                                                                                 <a href="{{ route('product.detail', ['id' => $tercer_producto['slug']]) }}" class="product__link product__link--underline product__link--weight-light text-overflow-ellipsis m-t-15">
                                                                                     {{ $tercer_producto['name'] }}
                                                                                 </a>
