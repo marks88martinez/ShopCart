@@ -147,11 +147,13 @@
             </div>
         </div> <!-- End Modal Add cart -->
     {{-- //////////////////////////////////// --}}
-    <div class="whatsapp-float">
-        <a href="https://wa.me/1234567890" target="_blank">
+    <div class="whatsapp-float" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+        <a href="https://wa.me/+595981278616?text=%C2%A1Hola%2C%20quiero%20saber%20m%C3%A1s%21" target="_blank">
             <img src="{{asset('imagenes/whatsapp.png')}}" alt="WhatsApp">
         </a>
     </div>
+    
+    
     {{-- //////////////////////////////////// --}}
 </div>
     <!-- Vendor JS Files -->
