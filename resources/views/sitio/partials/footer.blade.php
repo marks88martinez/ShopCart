@@ -7,7 +7,7 @@
                     <div class="footer__about">
                         <div class="footer__logo">
                             <a href="index.html" class="footer__logo-link">
-                                <img src="assets/img/logo/logo-color.png" alt="" class="footer__logo-img">
+                                <img style="height: 135px" src="{{ asset('template_front/assets/img/logo/logo-color.png') }}" alt="" class="footer__logo-img">
                             </a>
                         </div>
                         <div class="footer__text">

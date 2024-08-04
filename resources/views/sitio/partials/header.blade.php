@@ -97,7 +97,7 @@
                     <div class="col-lg-3">
                         <div class="header__logo">
                             <a href="/" class="header__logo-link">
-                                <img src="{{ asset('template_front/assets/img/logo/logo-color.png') }}" alt="" class="header__logo-img">
+                                <img style="height: 135px" src="{{ asset('template_front/assets/img/logo/logo-color.png') }}" alt="" class="header__logo-img">
                                 
                             </a>
                         </div>
@@ -509,7 +509,7 @@
                     <div class="header__mobile-top">
                         <div class="mobile-header__logo">
                             <a href="index.html" class="mobile-header__logo-link">
-                                <img src="template_front/assets/img/logo/logo-color.png" alt="" class="mobile-header__logo-img">
+                                <img style="height: 135px" src="template_front/assets/img/logo/logo-color.png" alt="" class="mobile-header__logo-img">
                             </a>
                         </div>
                         <div class="header__wishlist-box">
