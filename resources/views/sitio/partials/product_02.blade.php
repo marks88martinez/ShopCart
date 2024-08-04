@@ -103,7 +103,8 @@
                                                                         @if(isset($primer_producto['producto_imagenes'][0]))
                                                                             <div class="product__price">
                                                                                 <!-- <span class="product__price-del">$35.90</span> -->
-                                                                                @if ($primer_producto['precio'] != 0)
+                                                                             
+                                                                                @if (isset($primer_producto['precio']) && $primer_producto['precio'] > 0)
                                        
                                                                                   <span class="product__price-reg">$ {{ $primer_producto['precio'] }}</span>
                                                                                 @endif
@@ -173,7 +174,7 @@
                                                                             </div>
                                                                             <div class="col-12 col-sm-6">
                                                                                 <div class="product__price">
-                                                                                    @if ( isset($tercer_producto['precio']))
+                                                                                    @if ( isset($segundo_producto['precio'])  && $segundo_producto['precio'] > 0)
                                             
                                                                                         <span class="product__price-reg">${{ $segundo_producto['precio'] }}</span>
                                                                                     @endif
@@ -236,7 +237,7 @@
                                                                             <div class="col-12 col-sm-6">
                                                                                 <div class="product__price">
                                                                                     {{-- <span class="product__price-del">$9.00</span> --}}
-                                                                                    @if (isset( $tercer_producto['precio']))
+                                                                                    @if (isset($tercer_producto['precio']) && $tercer_producto['precio'] > 0)
                                                                                     <span class="product__price-reg">${{ $tercer_producto['precio'] }}</span>
                                                                                     @endif
                                                                                 </div>
