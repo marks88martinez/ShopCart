@@ -509,23 +509,24 @@
                     <div class="header__mobile-top">
                         <div class="mobile-header__logo">
                             <a href="index.html" class="mobile-header__logo-link">
-                                <img style="height: 135px" src="template_front/assets/img/logo/logo-color.png" alt="" class="mobile-header__logo-img">
+                                <img style="height: 135px" src="{{ asset('template_front/assets/img/logo/logo-color.png') }}" alt="" class="mobile-header__logo-img">
                             </a>
                         </div>
                         <div class="header__wishlist-box">
                             <!-- Start Header Wishlist Box -->
-                            <div class="header__wishlist pos-relative">
+                            {{-- <div class="header__wishlist pos-relative">
                                 <a href="wishlist.html" class="header__wishlist-link">
                                     <i class="icon-heart"></i>
                                     <span class="wishlist-item-count pos-absolute">3</span>
                                 </a>
-                            </div> <!-- End Header Wishlist Box -->
+                            </div>  --}}
+                            <!-- End Header Wishlist Box -->
 
                             <!-- Start Header Add Cart Box -->
                             <div class="header-add-cart pos-relative m-l-20">
                                 <a href="#offcanvas-add-cart__box" class="header__wishlist-link offcanvas--open-checkout offcanvas-toggle">
                                     <i class="icon-shopping-cart"></i>
-                                    <span class="wishlist-item-count pos-absolute">3</span>
+                                    <span class="wishlist-item-count pos-absolute">{{ \Cart::getTotalQuantity()}}</span>
                                 </a>
                             </div> <!-- End Header Add Cart Box -->
 
@@ -536,196 +537,16 @@
 
                     <!-- Start Header Mobile Middle area -->
                     <div class="header__mobile-middle header__top--style-1 p-tb-10">
-                        <form class="header__search-form" action="{{ route('products') }}" method="GET">
+                        <form action="{{ route('products') }}" method="GET" class="header__search-form">
                             <div class="header__search-category header__search-category--mobile">
                                 <select class="bootstrap-select">
-                                    <option value="0">All</option>
-                                    <option value="12">
-                                        Fashion
-                                    </option>
-                                    <option value="27">
-                                        - - Women
-                                    </option>
-                                    <option value="30">
-                                        - - - - Dresses
-                                    </option>
-                                    <option value="31">
-                                        - - - - Shirts &amp; Blouses
-                                    </option>
-                                    <option value="32">
-                                        - - - - Blazers
-                                    </option>
-                                    <option value="33">
-                                        - - - - Lingerie
-                                    </option>
-                                    <option value="34">
-                                        - - - - Jeans
-                                    </option>
-                                    <option value="28">
-                                        - - Men
-                                    </option>
-                                    <option value="35">
-                                        - - - - Shorts
-                                    </option>
-                                    <option value="36">
-                                        - - - - Sportswear
-                                    </option>
-                                    <option value="37">
-                                        - - - - Swimwear
-                                    </option>
-                                    <option value="38">
-                                        - - - - Jackets &amp; Suits
-                                    </option>
-                                    <option value="39">
-                                        - - - - T-shirts &amp; Tank Tops
-                                    </option>
-                                    <option value="29">
-                                        - - Kids
-                                    </option>
-                                    <option value="40">
-                                        - - - - Trousers
-                                    </option>
-                                    <option value="41">
-                                        - - - - Shirts &amp; Tops
-                                    </option>
-                                    <option value="42">
-                                        - - - - Knitwear
-                                    </option>
-                                    <option value="43">
-                                        - - - - Jackets
-                                    </option>
-                                    <option value="44">
-                                        - - - - Sandals
-                                    </option>
-                                    <option value="13">
-                                        Electronics
-                                    </option>
-                                    <option value="45">
-                                        - - Cameras
-                                    </option>
-                                    <option value="49">
-                                        - - - - Cords and Cables
-                                    </option>
-                                    <option value="50">
-                                        - - - - gps accessories
-                                    </option>
-                                    <option value="51">
-                                        - - - - Microphones
-                                    </option>
-                                    <option value="52">
-                                        - - - - Wireless Transmitters
-                                    </option>
-                                    <option value="46">
-                                        - - Audio
-                                    </option>
-                                    <option value="53">
-                                        - - - - Other Accessories
-                                    </option>
-                                    <option value="54">
-                                        - - - - Portable Audio
-                                    </option>
-                                    <option value="55">
-                                        - - - - Satellite Radio
-                                    </option>
-                                    <option value="56">
-                                        - - - - Visual Accessories
-                                    </option>
-                                    <option value="47">
-                                        - - Cell Phones
-                                    </option>
-                                    <option value="57">
-                                        - - - - iPhone
-                                    </option>
-                                    <option value="58">
-                                        - - - - Samsung Galaxy
-                                    </option>
-                                    <option value="59">
-                                        - - - - SIM Cards
-                                    </option>
-                                    <option value="60">
-                                        - - - - Prepaid Cell Phones
-                                    </option>
-                                    <option value="48">
-                                        - - TV &amp; Video
-                                    </option>
-                                    <option value="61">
-                                        - - - - 4K Ultra HDTVs
-                                    </option>
-                                    <option value="62">
-                                        - - - - All TVs
-                                    </option>
-                                    <option value="63">
-                                        - - - - Refurbished TVs
-                                    </option>
-                                    <option value="64">
-                                        - - - - TV Accessories
-                                    </option>
-                                    <option value="14">
-                                        Toys &amp; Hobbies
-                                    </option>
-                                    <option value="65">
-                                        - - Books &amp; Board Games
-                                    </option>
-                                    <option value="67">
-                                        - - - - Arts &amp; Crafts
-                                    </option>
-                                    <option value="68">
-                                        - - - - Baby &amp; Toddler Toys
-                                    </option>
-                                    <option value="69">
-                                        - - - - Electronics for Kids
-                                    </option>
-                                    <option value="70">
-                                        - - - - Dolls &amp; Accessories
-                                    </option>
-                                    <option value="66">
-                                        - - Baby Dolls
-                                    </option>
-                                    <option value="71">
-                                        - - - - Baby Alive Dolls
-                                    </option>
-                                    <option value="72">
-                                        - - - - Barbie
-                                    </option>
-                                    <option value="73">
-                                        - - - - Baby Annabell
-                                    </option>
-                                    <option value="74">
-                                        - - - - Bratz
-                                    </option>
-                                    <option value="15">
-                                        Sports &amp; Outdoors
-                                    </option>
-                                    <option value="16">
-                                        Smartphone &amp; Tablets
-                                    </option>
-                                    <option value="17">
-                                        Health &amp; Beauty
-                                    </option>
-                                    <option value="18">
-                                        Computers &amp; Networking
-                                    </option>
-                                    <option value="19">
-                                        Accessories
-                                    </option>
-                                    <option value="20">
-                                        Jewelry &amp; Watches
-                                    </option>
-                                    <option value="21">
-                                        Flashlights &amp; Lamps
-                                    </option>
-                                    <option value="22">
-                                        Cameras &amp; Photo
-                                    </option>
-                                    <option value="23">
-                                        Holiday Supplies &amp; Gifts
-                                    </option>
-                                    <option value="24">
-                                        Automotive
-                                    </option>
-                                    <option value="25">
-                                        cosmetic
-                                    </option>
+                                    <option value="0">Categorias</option>
+                             
+                                    @foreach ($categorias as $categoria)
+                                        <option value="{{ $categoria->id }}">
+                                        {{ $categoria->name }}
+                                        </option>
+                                    @endforeach
                                 </select>
                             </div>
                             <div class="header__search-input header__search-input--mobile">
@@ -744,15 +565,15 @@
     <div id="offcanvas-mobile-menu" class="offcanvas offcanvas-mobile-menu">
         <button class="offcanvas__close offcanvas-close">&times;</button>
         <div class="offcanvas-inner">
-            <div class="offcanvas-userpanel m-b-30">
+            {{-- <div class="offcanvas-userpanel m-b-30">
                 <ul>
                     <li class="offcanvas-userpanel__role">
-                        <a href="#">Setting</a>
+                        <a href="#">Menú</a>
                         <ul class="user-sub-menu">
-                            <li><a href="my-account.html">My account</a></li>
-                            <li><a href="wishlist.html">My wishlist</a></li>
-                            <li><a href="checkout.html">Checkout</a></li>
-                            <li><a href="login.html">Sign in</a></li>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/products">Productos</a></li>
+                            <li><a href="company">Empresa</a></li>
+                            <li><a href="contact">Contactos</a></li>
                         </ul>
                     </li>
                     <li class="offcanvas-userpanel__role">
@@ -770,123 +591,28 @@
                         </ul>
                     </li>
                 </ul>
-            </div>
+            </div> --}}
             
             <div class="offcanvas-menu m-b-30">
                 <h4>Menu</h4>
-                <ul>
-                    <li>
-                        <a href="#"><span>Home</span></a>
-                        <ul class="sub-menu">
-                            <li><a href="index.html"><span class="menu-text">Home 1</span></a></li>
-                            <li><a href="index-2.html"><span class="menu-text">Home 2</span></a></li>
-                            <li> <a href="index-3.html"><span class="menu-text">Home 3</span></a></li>
-                            <li><a href="index-4.html"><span class="menu-text">Home 4</span></a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"><span>Pages</span></a>
-                        <ul class="sub-menu">
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="cart.html">Cart</a></li>
-                            <li><a href="checkout.html">Checkout</a></li>
-                            <li><a href="compare.html">Compare</a></li>
-                            <li><a href="empty-cart.html">Empty Cart</a></li>
-                            <li><a href="wishlist.html">Wishlist</a></li>
-                            <li><a href="my-account.html">My Account</a></li>
-                            <li><a href="login.html">Login</a></li>
-                            <li><a href="404-page.html">404 Page</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"><span>Shop</span></a>
-                        <ul class="sub-menu">
-                            <li>
-                                <a href="#">Shop Grid</a>
-                                <ul class="sub-menu">
-                                    <li><a href="single-1.html">Shop Default</a></li>
-                                    <li><a href="shop-4-grid.html">Shop 4grid</a></li>
-                                    <li><a href="shop-5-grid.html">Shop 5grid</a></li>
-                                    <li><a href="shop-grid-left-sidebar.html">Shop Left Sidebar</a></li>
-                                    <li><a href="shop-grid-right-sidebar.html">Shop Right Sidebar</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <ul class="sub-menu">
-                            <li>
-                                <a href="#">Shop List</a>
-                                <ul class="sub-menu">
-                                    <li><a href="shop-list.html">Shop List</a></li>
-                                    <li><a href="shop-list-left-sidebar.html">Shop Left Sidebar</a></li>
-                                    <li><a href="shop-list-right-sidebar.html">Shop Right Sidebar</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <ul class="sub-menu">
-                            <li>
-                                <a href="#">Product Single</a>
-                                <ul class="sub-menu">
-                                    <li><a href="single-1.html">Single</a></li>
-                                    <li><a href="single-variable.html">Variable</a></li>
-                                    <li><a href="single-left-tab.html">Left Tab</a></li>
-                                    <li><a href="single-right-tab.html">Right Tab</a></li>
-                                    <li><a href="single-slider.html">Single Slider</a></li>
-                                    <li><a href="single-gallery-left.html">Gallery Left</a></li>
-                                    <li><a href="single-gallery-right.html">Gallery Right</a></li>
-                                    <li><a href="single-sticky-left.html">Sticky Left</a></li>
-                                    <li><a href="single-sticky-right.html">Sticky Right</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"><span>Blogs</span></a>
-                        <ul class="sub-menu">
-                            <li>
-                                <a href="#">Blog Grid</a>
-                                <ul class="sub-menu">
-                                    <li><a href="blog-grid-left-sidebar.html"> Blog Grid Left Sidebar</a></li>
-                                    <li><a href="blog-grid-right-sidebar.html"> Blog Grid Right Sidebar</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">Blog List</a>
-                                <ul class="sub-menu">
-                                    <li><a href="blog-list-left-sidebar.html"> Blog List Left Sidebar</a></li>
-                                    <li><a href="blog-list-right-sidebar.html"> Blog List Right Sidebar</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">Blog Single</a>
-                                <ul class="sub-menu">
-                                    <li><a href="blog-single-left-sidebar.html"> Blog List Left Sidebar</a></li>
-                                    <li><a href="blog-single-right-sidebar.html"> Blog List Right Sidebar</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html">Contact Us</a></li>
+              
+    
+                    <li><a href="/">Home</a></li>
+                    <li><a href="products">Productos</a></li>
+                    <li><a href="company">Empresa</a></li>
+                    <li><a href="contact">Contactos</a></li>
                 </ul>
             </div>
-            <div class="offcanvas-buttons m-b-30">
-                <a href="my-account.html" class="user"><i class="icon-user"></i></a>
-                <a href="wishlist.html"><i class="icon-heart"></i></a>
-                <a href="cart.html"><i class="icon-shopping-cart"></i></a>
-            </div>
+   
             <div class="offcanvas-social">
-                <span>Stay With Us</span>
+                <span>Síganos</span>
                 <ul>
                     <li>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/krishnacde"><i class="fab fa-facebook"></i></a>
                     </li>
+                   
                     <li>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/krishna_krs"><i class="fab fa-instagram"></i></a>
                     </li>
                 </ul>
             </div>
