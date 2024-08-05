@@ -59,9 +59,9 @@
                             <div class="footer__menu">
                                 <h4 class="footer__nav-title">Síganos</h4>
                                 <ul class="footer__social-nav">
-                                    <li class="footer__social-list"><a href="#" class="footer__social-link"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li class="footer__social-list"><a href="#" class="footer__social-link"><i class="fab fa-youtube"></i></a></li>
-                                    <li class="footer__social-list"><a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a></li>
+                                    <li class="footer__social-list"><a href="https://www.facebook.com/krishnacde" class="footer__social-link"><i class="fab fa-facebook-f"></i></a></li>
+                                    {{-- <li class="footer__social-list"><a href="#" class="footer__social-link"><i class="fab fa-youtube"></i></a></li> --}}
+                                    <li class="footer__social-list"><a href="https://www.instagram.com/krishna_krs" class="footer__social-link"><i class="fab fa-instagram"></i></a></li>
                                 </ul>
                             </div>
                         </div>

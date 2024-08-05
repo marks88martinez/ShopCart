@@ -72,7 +72,10 @@
                         <div class="col-md-6">
                             <div class="product-details-box">
                                 <h5 class="section-content__title">{{$product->name}}</h5>
+                                @isset($product->sku)
+            
                                 <span class="text-reference">Code: {{$product->sku}}</span>
+                                @endisset
                                 
                                 <div class="product__price">
                                     @if(isset($product->precio_oferta))
@@ -80,7 +83,10 @@
                                     <span class="product__price-del">${{$product->precio}}</span>
                                     <span class="product__price-reg">${{$product->precio_oferta}}</span>
                                     @else
+                                        @if(isset($product->precio))
+                                            
                                         <span class="product__price-reg">${{$product->precio}}</span>
+                                        @endif
                                     @endif
 
                                 </div>
@@ -131,12 +137,12 @@
                                 </div>
                                 <div class="product-links ">
                                     <div class="product-social m-tb-30">
-                                        <span>Share</span>
+                                        <span>Síganos</span>
                                         <ul class="product-social-link">
-                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                                            <li><a href="https://www.facebook.com/krishnacde"><i class="fab fa-facebook-f"></i></a></li>
+                                            {{-- <li><a href="#"><i class="fab fa-twitter"></i></a></li> --}}
+                                            {{-- <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li> --}}
+                                            <li><a href="https://www.instagram.com/krishna_krs"><i class="fab fa-instagram"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>
