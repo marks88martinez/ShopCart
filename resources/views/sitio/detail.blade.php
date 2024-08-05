@@ -83,7 +83,7 @@
                                     <span class="product__price-del">${{$product->precio}}</span>
                                     <span class="product__price-reg">${{$product->precio_oferta}}</span>
                                     @else
-                                        @if(isset($product->precio))
+                                        @if(isset($product->precio) && $product->precio > 0)
                                             
                                         <span class="product__price-reg">${{$product->precio}}</span>
                                         @endif
