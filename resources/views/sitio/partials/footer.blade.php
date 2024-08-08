@@ -24,7 +24,7 @@
                             </li>
                             <li class="footer__address-item"><span><strong> Contacto:</strong></span> <br/>
                                
-                                <strong>Tel: </strong> 561-501-305<br/>
+                                <strong>Tel: </strong> 061-501-305<br/>
                                 <strong> WhatsApp: </strong>+595 981 278 616<br/>
                                 <strong> Email:</strong> krishnacde.py@gmail.com<br/>
                             </li>
