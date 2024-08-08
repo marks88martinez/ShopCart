@@ -11,18 +11,25 @@
                             </a>
                         </div>
                         <div class="footer__text">
+                            
                             <p>
-
-                                NÃO MUDE DE CASA , MUDE A CASA "
-                                Loja de decoração , artigos de casa e presentes .
-                                Localizada em Ciudad del Este - Paraguay .                                </p>
+                                Tienda de decoración, artículos para el hogar y regalos.
+                                Ubicada en Ciudad del Este, Paraguay.
+                             </p>
                         </div>
                         <ul class="footer__address">
-                            <li class="footer__address-item"><span>DIRECCIÓN:</span> 
-                                shopping vendome - piso 5 tel 561-501-305 krishna s.a
-                                </li>
-                            <li class="footer__address-item"><span>Llámanos: </span> <a href="tel:+595 981278616">+595 981278616</a> </li>
-                            <li class="footer__address-item"><span>Email: </span> <a href="mailto:contacto@krishna.com">contacto@krishna.com</a></li>
+                            <li class="footer__address-item"><span><strong>Sucursales:</strong></span> 
+                                Shopping Vendome - 5to Piso<br/>
+                                Shopping Americana
+                            </li>
+                            <li class="footer__address-item"><span><strong> Contacto:</strong></span> 
+                               
+                                Tel: 561-501-305<br/>
+                                WhatsApp: +595 981 278 616<br/>
+                                Email: contacto@krishna.com<br/>
+                            </li>
+                            {{-- <li class="footer__address-item"><span>Contacto: </span> <a href="tel:+595 981278616">+595 981278616</a> </li> --}}
+                            {{-- <li class="footer__address-item"><span>Email: </span> <a href="mailto:contacto@krishna.com">contacto@krishna.com</a></li> --}}
                         </ul>
                     </div>
                 </div>
