@@ -26,7 +26,7 @@
                                
                                 <strong>Tel: </strong> 561-501-305<br/>
                                 <strong> WhatsApp: </strong>+595 981 278 616<br/>
-                                <strong> Email:</strong> contacto@krishna.com<br/>
+                                <strong> Email:</strong> krishnacde.py@gmail.com<br/>
                             </li>
                             {{-- <li class="footer__address-item"><span>Contacto: </span> <a href="tel:+595 981278616">+595 981278616</a> </li> --}}
                             {{-- <li class="footer__address-item"><span>Email: </span> <a href="mailto:contacto@krishna.com">contacto@krishna.com</a></li> --}}
