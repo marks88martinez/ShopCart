@@ -158,7 +158,7 @@
                             <div class="product__box product__box--list">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <div class="product__img-box">
+                                        <div class="product__img-box  ">
 
                                             {{-- ////////////////IMAGES/////////////////// --}}
                                             @if ($product->productoImagen->count())
@@ -190,7 +190,7 @@
 
                                                 {{-- <div class="card-footer" style="background-color: white;"> --}}
                                                     {{-- <div class="row"> --}}
-                                                        <button class="btn btn--box btn--small btn--gray btn--uppercase btn--weight btn--hover-zoom product__upper-btn" class="tooltip-test" title="add to cart">
+                                                        <button class="btn btn--box btn--small btn--gray btn--uppercase btn--weight btn--hover-zoom product__upper-btn text" style="width: 200px" class="tooltip-test" title="add to cart">
                                                             <i class="fa fa-shopping-cart"></i> Add al Carrito
                                                         </button>
                                                     {{-- </div> --}}
