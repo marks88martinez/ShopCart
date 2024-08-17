@@ -49,7 +49,7 @@
                         <span>Hay {{$productsCount}} Productos.</span>
                     </div> <!-- Start Sort Left Side -->
 
-                    <div class="sort-box__right">
+                    {{-- <div class="sort-box__right">
                         <span>Ordenar por:</span>
                         <div class="sort-box__option">
                             <label class="select-sort__arrow">
@@ -62,7 +62,7 @@
                                 </select>
                             </label>
                         </div>
-                    </div>
+                    </div> --}}
                 </div> <!-- ::::::  Start Sort Box Section  ::::::  -->
 
                 <div class="product-tab-area">
@@ -150,33 +150,94 @@
                        
                         </div>
                         <div class="tab-pane shop-list" id="sort-list">
+
+                            {{-- ///////////////////////// --}}
                             <!-- Start Single List Product -->
+                            @foreach ($products as $product)
+                           
                             <div class="product__box product__box--list">
                                 <div class="row">
-                                    <div class="col-md-4">
+                                    <div class="col-md-6">
                                         <div class="product__img-box">
-                                            <a href="single-1.html" class="product__img--link">
+
+                                            {{-- ////////////////IMAGES/////////////////// --}}
+                                            @if ($product->productoImagen->count())
+
+                                            @foreach ($product->productoImagen as  $imagen)
+                                            {{-- <img src=" {{ $imagen->path_image }}"  class="card-img-top mx-auto"
+                                            style="height: 150px; width: 150px;display: block;"> --}}
+
+                                            <a href="{{ route('product.detail', ['id' => $product->slug]) }}" class="product__img--link">
+                                                <img class="product__img" src="{{ $imagen->path_image_200x200 }}" alt="">
+                                            </a>
+                                            {{-- <a href="#modalAddCart" data-toggle="modal" class="btn btn--box btn--small btn--gray btn--uppercase btn--weight btn--hover-zoom product__upper-btn">Add to cart</a> --}}
+
+                                            {{-- /////////////////////////////// --}}
+                                            <form action="{{ route('cart.store') }}" method="POST">
+                                                {{ csrf_field() }}
+                                                <input type="hidden" value="{{ $product->id }}" id="id" name="id">
+                                                <input type="hidden" value="{{ $product->name }}" id="name" name="name">
+                                                <input type="hidden" value="{{ $product->precio }}" id="precio" name="precio">
+                                                
+                                                @foreach ($product->productoImagen as  $imagen)
+                                            
+                                                <input type="hidden" value="{{ $imagen->path_image }}" id="img" name="img">
+                                                @endforeach
+        
+                                                <input type="hidden" value="{{ $product->slug }}" id="slug" name="slug">
+                                                <input type="hidden" value="1" id="quantity" name="quantity">
+                                                {{-- <button  class="btn btn--box btn--small btn--gray btn--uppercase btn--weight btn--hover-zoom product__upper-btn">Add al Carrito</button> --}}
+
+                                                {{-- <div class="card-footer" style="background-color: white;"> --}}
+                                                    {{-- <div class="row"> --}}
+                                                        <button class="btn btn--box btn--small btn--gray btn--uppercase btn--weight btn--hover-zoom product__upper-btn" class="tooltip-test" title="add to cart">
+                                                            <i class="fa fa-shopping-cart"></i> Add al Carrito
+                                                        </button>
+                                                    {{-- </div> --}}
+                                                {{-- </div> --}}
+                                            </form>
+                                            {{-- /////////////////////////////// --}}
+                                            @endforeach
+        
+                                        @else
+                                            <img src="/imagenes/img_alt.png"  style="width: 80px"></td>
+        
+                                        @endif
+                                            {{-- /////////////////////////////////// --}}
+
+                                            {{-- <a href="single-1.html" class="product__img--link">
                                                 <img class="product__img" src="template_front_front/assets/img/product/size-normal/product-home-1-img-1.jpg" alt="">
                                             </a>
                                             
-                                            <span class="product__tag product__tag--discount">-12%</span>
+                                            <span class="product__tag product__tag--discount">-12%</span> --}}
                                             
                                         </div>
                                     </div>
                                     <div class="col-md-5 pos-relative">
                                         <div class="border-right pos-absolute"></div>
                                         <div class="product__price">
-                                            <span class="product__price-del">$11.90</span>
-                                            <span class="product__price-reg">$10.71</span>
+                                    
+                                            @if(isset($product->precio_oferta))
+                                                    <span class="product__price-del">${{$product->precio}}</span>
+                                                    <span class="product__price-reg">${{$product->precio_oferta}}</span>
+                                            @else
+                                                @if ($product->precio !=0 )
+                                                    <span class="product__price-reg">${{$product->precio}}</span>
+                                                @endif
+                                            @endif
+
                                         </div>
                                         <a href="single-1.html" class="product__link product__link--underline product__link--weight-light m-t-15">
-                                            SonicFuel Wireless Over-Ear Headphones
+                                            {{ $product->name}}
                                         </a>
                                         <div class="product__desc m-t-25 m-b-30">
-                                            <p>The ATH-S700BT offers clear, full-bodied audio reproduction with Bluetooth® wireless operation. The headphones are equipped with a mic, and music and volume controls, allowing you to ...</p>
+                                            <p>
+                                               
+                                                {!! Str::limit($product->description, 100) !!}
+                                            </p>
                                         </div>
                                     </div>
-                                    <div class="col-md-3">
+                                    {{-- <div class="col-md-3">
                                         <div>
                                             <ul class="shop__list-link">
                                                 <li><a href="#modalAddCart" data-toggle="modal" class="btn btn--block btn--small btn--border-blue btn--uppercase btn--weight m-b-15">Add to cart</a></li>
@@ -184,81 +245,13 @@
                                                 <li><a href="#modalQuickView" data-toggle="modal"  class="link--gray link--icon-left shop__quickview-icon"><i class="icon-eye"></i>Quick View</a></li>
                                             </ul>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div> <!-- Start Single List Product -->
-                            <!-- Start Single List Product -->
-                            <div class="product__box product__box--list">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="product__img-box">
-                                            <a href="single-1.html" class="product__img--link">
-                                                <img class="product__img" src="template_front_front/assets/img/product/size-normal/product-home-1-img-2.jpg" alt="">
-                                            </a>
-                                            <span class="product__tag product__tag--discount">-12%</span>
-                                            
-                                        </div>
-                                    </div>
-                                    <div class="col-md-5 pos-relative">
-                                        <div class="border-right pos-absolute"></div>
-                                        <div class="product__price">
-                                            <span class="product__price-del">$11.90</span>
-                                            <span class="product__price-reg">$10.71</span>
-                                        </div>
-                                        <a href="single-1.html" class="product__link product__link--underline product__link--weight-light m-t-15">
-                                            SonicFuel Wireless Over-Ear Headphones
-                                        </a>
-                                        <div class="product__desc m-t-25 m-b-30">
-                                            <p>The ATH-S700BT offers clear, full-bodied audio reproduction with Bluetooth® wireless operation. The headphones are equipped with a mic, and music and volume controls, allowing you to ...</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div>
-                                            <ul class="shop__list-link">
-                                                <li><a href="#modalAddCart" data-toggle="modal" class="btn btn--block btn--small btn--border-blue btn--uppercase btn--weight m-b-15">Add to cart</a></li>
-                                                <li><a href="wishlist.html" class="link--gray link--icon-left shop__wishlist-icon m-b-5"><i class="icon-heart"></i>Add To Wishlist</a></li>
-                                                <li><a href="#modalQuickView" data-toggle="modal"  class="link--gray link--icon-left shop__quickview-icon"><i class="icon-eye"></i>Quick View</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> <!-- Start Single List Product -->
-                            <!-- Start Single List Product -->
-                            <div class="product__box product__box--list">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="product__img-box">
-                                            <a href="single-1.html" class="product__img--link">
-                                                <img class="product__img" src="template_front_front/assets/img/product/size-normal/product-home-1-img-3.jpg" alt="">
-                                            </a>
-                                            <span class="product__tag product__tag--discount">-12%</span>
-                                            
-                                        </div>
-                                    </div>
-                                    <div class="col-md-5 pos-relative">
-                                        <div class="border-right pos-absolute"></div>
-                                        <div class="product__price">
-                                            <span class="product__price-del">$11.90</span>
-                                            <span class="product__price-reg">$10.71</span>
-                                        </div>
-                                        <a href="single-1.html" class="product__link product__link--underline product__link--weight-light m-t-15">
-                                            SonicFuel Wireless Over-Ear Headphones
-                                        </a>
-                                        <div class="product__desc m-t-25 m-b-30">
-                                            <p>The ATH-S700BT offers clear, full-bodied audio reproduction with Bluetooth® wireless operation. The headphones are equipped with a mic, and music and volume controls, allowing you to ...</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div>
-                                            <ul class="shop__list-link">
-                                                <li><a href="#modalAddCart" data-toggle="modal" class="btn btn--block btn--small btn--border-blue btn--uppercase btn--weight m-b-15">Add to cart</a></li>
-                                                <li><a href="wishlist.html" class="link--gray link--icon-left shop__wishlist-icon m-b-5"><i class="icon-heart"></i>Add To Wishlist</a></li>
-                                                <li><a href="#modalQuickView" data-toggle="modal"  class="link--gray link--icon-left shop__quickview-icon"><i class="icon-eye"></i>Quick View</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> <!-- Start Single List Product -->
+                             {{-- ///////////////////////// --}}
+
+                             @endforeach
+                            
                             
                         </div>
                     </div>
