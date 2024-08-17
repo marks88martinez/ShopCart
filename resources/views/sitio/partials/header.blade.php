@@ -508,7 +508,7 @@
                     <!-- Start Header Mobile Top area -->
                     <div class="header__mobile-top">
                         <div class="mobile-header__logo">
-                            <a href="index.html" class="mobile-header__logo-link">
+                            <a href="{{ url('/') }}"  class="mobile-header__logo-link">
                                 <img style="height: 135px" src="{{ asset('template_front/assets/img/logo/logo-color.png') }}" alt="" class="mobile-header__logo-img">
                             </a>
                         </div>

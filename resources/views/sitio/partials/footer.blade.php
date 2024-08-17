@@ -6,7 +6,7 @@
                 <div class="col-lg-4 col-md-12">
                     <div class="footer__about">
                         <div class="footer__logo">
-                            <a href="index.html" class="footer__logo-link">
+                            <a href="{{ url('/') }}" class="footer__logo-link">
                                 <img style="height: 135px" src="{{ asset('template_front/assets/img/logo/logo-color.png') }}" alt="" class="footer__logo-img">
                             </a>
                         </div>
@@ -39,7 +39,7 @@
                         <ul class="footer__nav">
                             @foreach ($categorias as $index => $categoria)
                             @if ($index < 7)
-                                <li class="footer__list"><a href="" class="footer__link">{{$categoria->name}}</a></li>
+                                <li class="footer__list"><a href="{{ url('/products/' . $categoria->id) }}" class="footer__link">{{$categoria->name}}</a></li>
                             @else
                                 @break
                             @endif
@@ -53,10 +53,10 @@
                     <div class="footer__menu">
                         <h4 class="footer__nav-title">Menú</h4>
                         <ul class="footer__nav">
-                            <li class="footer__list"><a href="" class="footer__link">Home</a></li>
-                            <li class="footer__list"><a href="" class="footer__link">Productos</a></li>
-                            <li class="footer__list"><a href="" class="footer__link">Empresa</a></li>
-                            <li class="footer__list"><a href="" class="footer__link">Contacto</a></li>
+                            <li class="footer__list"><a href="{{ url('/') }}" class="footer__link">Home</a></li>
+                            <li class="footer__list"><a href="{{ url('/product') }}" class="footer__link">Productos</a></li>
+                            <li class="footer__list"><a href="{{ url('/company') }}" class="footer__link">Empresa</a></li>
+                            <li class="footer__list"><a href="{{ url('/contact') }}" class="footer__link">Contacto</a></li>
                         </ul>
                     </div>
                 </div>
