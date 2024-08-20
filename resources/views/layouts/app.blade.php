@@ -27,7 +27,16 @@
 
     <link rel="stylesheet" href="{{ asset('template_front/assets/css/main.css') }}">
     <!-- Main Style CSS File -->
+
+
     <style>
+
+#audioPlayer {
+            width: 150px; /* Ancho del reproductor */
+            height: 20px; /* Altura del reproductor */
+            margin-left: auto; /* Alineación a la derecha */
+        }
+        
     .swiper-wrapper {
         position: relative;
         width: 100%;
@@ -185,6 +194,7 @@
     });
 
     </script>
+        
 
 
 

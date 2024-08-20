@@ -16,6 +16,7 @@
                             </div>
 
                             <div class="header__top-content--right">
+                           
                                 {{-- ////////////////////////////////////// --}}
                                 {{-- <div class="user-info user-set-role">
                                     <a class="user-set-role__button" href="#" data-toggle="dropdown" aria-haspopup="true">  <i class="icon-user"></i> Setting <i class="fal fa-chevron-down"></i></a>
@@ -65,8 +66,15 @@
                                     <div class="user-currency user-set-role">
                                         <a class="user-set-role__button" href="{{ route('client.login')}}"  aria-haspopup="true">  <i class="icon-user"></i> Login </i></a>
                                     </div>
-                                @endif
-                                
+                                    @endif
+                                    
+                                    <div class="user-currency user-set-role">
+                                        <audio id="audioPlayer" controls>
+                                            <source src="{{ asset('music/Nectar_Drop.mp3') }}" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                               
+                               
                                 
                                  
                                 <!-- <div class="user-currency user-set-role">
@@ -89,6 +97,7 @@
                 </div>
             </div>
         </div> <!-- Start Header Top area -->
+   
 
         <!-- Start Header Middle area -->
         <div class="header__middle header__top--style-1 p-tb-30">
@@ -105,6 +114,7 @@
                     <div class="col-lg-9">
                         <div class="row align-items-center">
                             <div class="col-lg-10">
+                                
                                 {{-- <form class="header__search-form" action="#">
                                     <div class="header__search-category">
                                         <select class="bootstrap-select" name="poscats">
@@ -325,6 +335,7 @@
                             </div>
                             <div class="col-lg-2">
                                 <div class="header__wishlist-box">
+                                 
                                     <!-- Start Header Wishlist Box -->
                                     {{-- <div class="header__wishlist pos-relative">
                                         <a href="wishlist.html" class="header__wishlist-link">
@@ -343,12 +354,14 @@
                                             <span class="wishlist-item-count pos-absolute">{{ \Cart::getTotalQuantity()}}</span>
                                         </a>
                                     </div> 
+                             
                                     <!-- End Header Add Cart Box -->
                                     <!-- Start Header User -->
                                     
                                     <!-- End Header User -->
                                 </div>
                             </div>
+                           
                         </div>
                     </div>
                 </div>
@@ -471,7 +484,10 @@
                             <li class="header__nav-item pos-relative">
                                  <a href="{{ route('contact') }}" class="header__nav-link">Contactos</a>
                             </li> <!-- End Single Nav link-->
+                           
+                          
                         </ul>
+                        
                     </nav>
                 </div>
             </div>
