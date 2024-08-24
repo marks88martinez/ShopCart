@@ -121,6 +121,11 @@ Route::group(['middleware' => ['auth', 'tipoUser:client'], 'prefix' => 'client',
 //     Route::post('producto/imagenTable/{id}', [ProductoController::class, 'imagenTable'])->name('producto.imagenTable');
 // });
 
+
+Route::fallback(function () {
+    return redirect('/');
+});
+
 Route::any('{query}',
     function() { return redirect('/'); })
     ->where('query', '.*');
