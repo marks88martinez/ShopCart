@@ -20,8 +20,8 @@
                         </div>
                         <ul class="footer__address">
                             <li class="footer__address-item"><span><strong>Sucursales:</strong></span> <br/>
-                                Shopping Vendome - 5to Piso<br/>
-                                Shopping Americana
+                                Shopping Vendome - 5º Piso<br/>
+                                Shopping Americana - 1º piso
                             </li>
                             <li class="footer__address-item"><span><strong> Contacto:</strong></span> <br/>
                                

@@ -45,8 +45,8 @@
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div class="contact-info-dec">
-                            <span>Shopping Vendome - 5to Piso,</span>
-                            <span>Shopping Americana.</span>
+                            <span>Shopping Vendome - 5º Piso,</span>
+                            <span> Shopping Americana - 1º piso.</span>
                         </div>
                     </div>
                     <div class="contact-social m-t-40">
