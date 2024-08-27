@@ -192,7 +192,10 @@ class HomeController extends Controller
     
  
         // Consulta inicial de todos los productos
-        $productsQuery = Producto::query()->where('status', 'active');
+        // $productsQuery = Producto::query()->where('status', 'active');
+        $productsQuery = Producto::query()
+                        ->where('status', 'active')
+                        ->inRandomOrder();
        
     
         // Filtrar productos si hay un término de búsqueda
