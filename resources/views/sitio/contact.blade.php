@@ -15,7 +15,9 @@
         <div class="row">
             <div class="col-12">
                 <div id="map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2136.986005919501!2d-73.9685579655238!3d40.75862446708152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258e4a1c884e5%3A0x24fe1071086b36d5!2sThe%20Atrium!5e0!3m2!1sen!2sbd!4v1585132512970!5m2!1sen!2sbd" allowfullscreen></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.3455043664265!2d-54.610386006946804!3d-25.508226532876453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9457aef2e17b78b7%3A0x21ebf8b7b573f100!2sKrishna!5e0!3m2!1ses!2spy!4v1693052150786!5m2!1ses!2spy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
                 </div>
             </div>
             <div class="col-lg-4 col-md-5">
@@ -25,8 +27,8 @@
                             <i class="fas fa-phone-alt"></i>
                         </div>
                         <div class="contact-info-dec">
-                            <a href="tel://+012-345-678-102">+012 345 678 102</a>
-                            <a href="tel://+012-345-678-102">+012 345 678 102</a>
+                            <a href="tel://061-501-305">061-501-305</a>
+                            <a href="tel://+595 981 278 616">+595 981 278 616</a>
                         </div>
                     </div>
                     <div class="single-contact-info">
@@ -34,8 +36,8 @@
                             <i class="fas fa-globe-asia"></i>
                         </div>
                         <div class="contact-info-dec">
-                            <a href="mailto://urname@email.com">urname@email.com</a>
-                            <a href="mailto://urwebsitenaem.com">urwebsitenaem.com</a>
+                            <a href="mailto://krishnacde.py@gmail.com">krishnacde.py@gmail.com</a>
+                            {{-- <a href="mailto://urwebsitenaem.com">urwebsitenaem.com</a> --}}
                         </div>
                     </div>
                     <div class="single-contact-info">
@@ -43,30 +45,31 @@
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div class="contact-info-dec">
-                            <span>Address goes here,</span>
-                            <span>street, Crossroad 123.</span>
+                            <span>Shopping Vendome - 5to Piso,</span>
+                            <span>Shopping Americana.</span>
                         </div>
                     </div>
                     <div class="contact-social m-t-40">
                         <div class="section-content">
-                            <h5 class="section-content__title">Follow Us</h5>
+                            <h5 class="section-content__title">Síganos</h5>
                         </div>
                         <div class="social-link m-t-30">
                             <ul>
                                 <li>
-                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://www.facebook.com/krishnacde"><i class="fab fa-facebook-f"></i></a>
                                 </li>
-                                <li>
+                                
+                                {{-- <li>
                                     <a href="#"><i class="fab fa-twitter"></i></a>
-                                </li>
-                                <li>
+                                </li> --}}
+                                {{-- <li>
                                     <a href="#"><i class="fab fa-youtube"></i></a>
                                 </li>
                                 <li>
                                     <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                                </li>
+                                </li> --}}
                                 <li>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.instagram.com/krishna_krs"><i class="fab fa-instagram"></i></a>
                                 </li>
                             </ul>
                         </div>
@@ -82,7 +85,7 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="form-box__single-group">
-                                    <input type="text" placeholder="Name" required>
+                                    <input type="text" placeholder="Nombre" required>
                                 </div>
                             </div>
                             <div class="col-lg-6">
@@ -97,7 +100,7 @@
                             </div>
                             <div class="col-lg-12">
                                 <div class="form-box__single-group">
-                                    <textarea rows="10" placeholder="Your Messege" required></textarea>
+                                    <textarea rows="10" placeholder="" required></textarea>
                                 </div>
                                 <button class="btn btn--box btn--small btn--blue btn--uppercase btn--weight m-t-30" type="submit">Send</button>
                             </div>
