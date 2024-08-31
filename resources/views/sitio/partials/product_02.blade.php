@@ -10,7 +10,7 @@
                               @foreach ($categoriasConProductos as $categoria => $productosPorIndex)
                                 {{-- {{$categoria}} --}}
                                 
-                                <li><a class="nav-link   {{ $loop->first ? 'active' : '' }}" data-toggle="tab" href="#{{ $categoria}}">{{ $categoria }}</a></li>
+                                <li><a class="nav-link   {{ $loop->first ? 'active' : '' }}" data-toggle="tab" href="#{{ str_replace(' ', '', $categoria) }}">{{ $categoria }}</a></li>
 
                                 
                                 {{-- <ul>
@@ -44,7 +44,7 @@
                             {{-- {{dd($categoriasConProductos) }} --}}
                             @foreach ($categoriasConProductos as $categoria => $productosPorIndex)
                            
-                            <div class="tab-pane {{ $loop->first ? 'show active' : '' }} " id="{{$categoria}}">
+                            <div class="tab-pane {{ $loop->first ? 'show active' : '' }} " id="{{ str_replace(' ', '', $categoria) }}">
                              
                                 <!-- Start Single Tab Content -->
                                 <div class="swiper-outside-arrow-fix pos-relative">
