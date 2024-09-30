@@ -27,6 +27,7 @@
 
     <link rel="stylesheet" href="{{ asset('template_front/assets/css/main.css') }}">
     <!-- Main Style CSS File -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
 
 
     <style>
@@ -86,6 +87,10 @@
     z-index: 1000;
 }
 
+#map {
+            height: 400px;
+            width: 100%;
+        }
 
     </style>
 
@@ -194,6 +199,30 @@
     });
 
     </script>
+
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
+<script>
+    // Coordenadas específicas
+    const lat = -25.51008683489679;
+    const lng = -54.609358779943406;
+
+    // Crear el mapa centrado en tus coordenadas
+    const map = L.map('map').setView([lat, lng], 13);
+
+    // Añadir el mapa de OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Enlace a Google Maps con las coordenadas
+    const googleMapsUrl = `https://www.google.com/maps?q=${lat},${lng}`;
+
+    // Añadir un marcador con el popup personalizado
+    const marker = L.marker([lat, lng]).addTo(map)
+        .bindPopup(`<b>Krishna</b><br><a href="${googleMapsUrl}" target="_blank">Abrir en Google Maps</a>`)
+        .openPopup();
+</script>
         
 
 

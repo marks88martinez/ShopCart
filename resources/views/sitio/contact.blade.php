@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col-12">
                 <div id="map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.3455043664265!2d-54.610386006946804!3d-25.508226532876453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9457aef2e17b78b7%3A0x21ebf8b7b573f100!2sKrishna!5e0!3m2!1ses!2spy!4v1693052150786!5m2!1ses!2spy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    {{-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.3455043664265!2d-54.610386006946804!3d-25.508226532876453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9457aef2e17b78b7%3A0x21ebf8b7b573f100!2sKrishna!5e0!3m2!1ses!2spy!4v1693052150786!5m2!1ses!2spy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> --}}
 
 
                 </div>
@@ -110,6 +110,11 @@
             </div>
         </div>
     </div>
+    
 
     <br><br>
+
+
+
+    
 @endsection
