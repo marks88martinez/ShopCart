@@ -203,12 +203,12 @@
 <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
 
 <script>
-    // Coordenadas específicas
-    const lat = -25.51008683489679;
-    const lng = -54.609358779943406;
+    // Coordenadas convertidas a formato decimal
+    const lat = -25.511028;
+    const lng = -54.609333;
 
-    // Crear el mapa centrado en tus coordenadas
-    const map = L.map('map').setView([lat, lng], 13);
+    // Crear el mapa centrado en tus coordenadas con un zoom más cercano (nivel 16)
+    const map = L.map('map').setView([lat, lng], 16);
 
     // Añadir el mapa de OpenStreetMap
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
